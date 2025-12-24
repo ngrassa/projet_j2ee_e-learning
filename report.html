@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> CI build report </title>
+	<style type="text/css">
+		table.preview {
+			max-width: 100%;
+			margin: auto;
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: #ffffff;
+			color: #212529;
+			border-collapse: collapse;
+		}
+
+		table.preview thead {
+			color: #708090
+		}
+
+		table.preview th {
+			font-size: 14px;
+			color: #ffffff;
+			font-weight: normal;
+			background: #454545;
+			padding: .75rem;
+			border: 1px solid #dee2e6;
+		}
+
+		table.preview td {
+			font-size: 13px;
+			color: #454545;
+			font-weight: normal;
+			text-align: center;
+			padding: 4px 6px;
+			border: 1px solid #d3d3d3;
+			padding: .75rem 0;
+			vertical-align:top;
+		}
+	</style>
+</head>
+
+<body>
+	<table class="preview">
+		<thead>
+			<tr>
+				<th>Job Name</th>
+				<th>Build No</th>
+				<th>Date</th>
+				<th>Build Status</th>
+				<th>Error Description</th>
+				<th>Console Output</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>%%JOBNAME%%</td>
+				<td>%%BUILDNO%%</td>
+				<td>%%DATE%%</td>
+				<td>%%BUILD_STATUS%%</td>
+				<td>%%ERROR%%</td>
+				<td><a href="%%CONSOLE_LOG%%">Click Here</a></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+</body>
+
+</html>

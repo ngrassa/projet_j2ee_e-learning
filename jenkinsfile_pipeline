@@ -1,0 +1,16 @@
+node {
+  
+    stage('Clone') {
+        
+       git credentialsId: 'git_credentials', url: 'https://github.com/ngrassa/projet_j2ee.git'
+    }
+
+    stage('Build') {
+        withMaven(jdk: 'java', maven: 'maven') {
+        sh 'mvn clean install package'
+    }
+    }
+     stage('Deploy') {
+       deploy adapters: [tomcat8(credentialsId: 'id_tomcat', path: '', url: 'http://13.37.41.70:8080')], contextPath: null, war: '**/*.war'
+    }
+}

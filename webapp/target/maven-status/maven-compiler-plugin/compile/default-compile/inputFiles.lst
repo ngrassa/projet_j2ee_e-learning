@@ -1,0 +1,17 @@
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/config/DataSourceFactory.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/config/DatabaseInitializer.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/model/Comment.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/model/CourseModule.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/model/Resource.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/model/User.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/repository/CommentDao.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/repository/ModuleDao.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/repository/ResourceDao.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/repository/UserDao.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/security/AuthFilter.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/web/CommentServlet.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/web/DashboardServlet.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/web/LoginServlet.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/web/LogoutServlet.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/web/ModuleServlet.java
+/home/osboxes/projet_j2ee_e-learning/webapp/src/main/java/com/example/elearning/web/UploadServlet.java

@@ -1,0 +1,43 @@
+stages:
+  - build
+  - deploy
+
+build_app:
+  stage: build
+  dependencies: []
+  tags:
+  - stand-shell
+  script:
+  - docker run -i --rm --name my-maven-project -v "$(pwd)":/mymaven -w /mymaven maven:3.3-jdk-8 mvn clean install
+  - cp webapp/target/webapp.war .
+  - docker run -i --rm --name my-maven-project -v "$(pwd)":/mymaven -w /mymaven maven:3.3-jdk-8 mvn clean
+  artifacts:
+    paths:
+    - webapp.war
+    expire_in: 1 week
+
+deploy_stand:
+  stage: deploy
+  dependencies:
+  - build_app
+  tags:
+  - stand-shell
+  script:
+  - docker run -d --rm --name hello-tomcat-${CI_COMMIT_SHA:0:8} -P
+      -v ${PWD}/webapp.war:/usr/local/tomcat/webapps/webapp.war   
+      tomcat:9.0-jre8-alpine
+  - docker ps -f "name=hello-tomcat-${CI_COMMIT_SHA:0:8}" --format '{{.Ports}}'
+
+deploy_prod:
+  stage: deploy
+  when: manual
+  dependencies:
+  - build_app
+  tags:
+  - prod-shell
+  script:
+  - docker run -d --rm --name hello-tomcat-${CI_COMMIT_SHA:0:8} -P
+      -v ${PWD}/webapp.war:/usr/local/tomcat/webapps/webapp.war   
+      tomcat:9.0-jre8-alpine
+  - docker ps -f "name=hello-tomcat-${CI_COMMIT_SHA:0:8}" --format '{{.Ports}}'
+

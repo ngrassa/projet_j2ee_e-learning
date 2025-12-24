@@ -1,0 +1,18 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<header class="container">
+    <nav>
+        <ul>
+            <li><strong>E-learning</strong></li>
+        </ul>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/dashboard">Tableau de bord</a></li>
+            <li><a href="${pageContext.request.contextPath}/upload">Depot PDF</a></li>
+            <li>
+                <form method="post" action="${pageContext.request.contextPath}/logout">
+                    <button type="submit" class="secondary">Déconnexion (${sessionScope.username})</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+

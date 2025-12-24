@@ -1,0 +1,17 @@
+com/example/elearning/repository/ResourceDao.class
+com/example/elearning/model/Resource.class
+com/example/elearning/web/ModuleServlet.class
+com/example/elearning/security/AuthFilter.class
+com/example/elearning/model/User.class
+com/example/elearning/config/DataSourceFactory.class
+com/example/elearning/web/LogoutServlet.class
+com/example/elearning/config/DatabaseInitializer.class
+com/example/elearning/repository/ModuleDao.class
+com/example/elearning/web/UploadServlet.class
+com/example/elearning/web/DashboardServlet.class
+com/example/elearning/model/CourseModule.class
+com/example/elearning/web/CommentServlet.class
+com/example/elearning/web/LoginServlet.class
+com/example/elearning/repository/CommentDao.class
+com/example/elearning/model/Comment.class
+com/example/elearning/repository/UserDao.class
